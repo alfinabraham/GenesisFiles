@@ -1,0 +1,369 @@
+{
+    "caliper": {
+        "blockchain": "ethereum"
+    },
+    "ethereum": {
+        "url": "ws://localhost:7545",
+        "contractDeployerAddress": "0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "contractDeployerAddressPrivateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
+        "fromAddress":"0xfe3b557e8fb62b89f4916b721be55ceb828dbd73",
+        "fromAddressPrivateKey": "0x8f2a55949038a9610f50fb23b5883af3b4ecb3c3bb792cbcefbd1542c692be63",
+        "transactionConfirmationBlocks": 12,
+        "contracts": {
+            "auctionsale": {
+                "address": "0xBA62B9dFA24a6968FA996148761a28700d240AD9",
+                "estimateGas": true,
+                "gas": {
+                    "registerprod":10000000,
+                    "certifyprod": 10000000,
+                    "initialAmount": 1000000,
+                    "startAuction": 10000000,
+                    "placeBid": 10000000,
+                    "announceWinner": 1000000,
+                    "transferPayment": 10000000,
+                    "transferOwnership": 10000000,
+                    "directSale":1000000,
+                    "BuyProduct":1000000,
+                    "selectDelivery":1000000,
+                    "receiveFromOwner":1000000,
+                    "itemDelivered":1000000
+                },
+                "abi": [
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_saleID",
+								"type": "string"
+							},
+							{
+								"name": "DelAmt",
+								"type": "int256"
+							},
+							{
+								"name": "Cloc",
+								"type": "string"
+							}
+						],
+						"name": "BuyProduct",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_ownerID",
+								"type": "string"
+							},
+							{
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"name": "_expiration_date",
+								"type": "int256"
+							}
+						],
+						"name": "certifyprod",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "saleID",
+								"type": "string"
+							},
+							{
+								"name": "productID",
+								"type": "string"
+							},
+							{
+								"name": "wgt",
+								"type": "int256"
+							},
+							{
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"name": "price",
+								"type": "int256"
+							}
+						],
+						"name": "directSale",
+						"outputs": [
+							{
+								"name": "",
+								"type": "string"
+							}
+						],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_bidderID",
+								"type": "string"
+							},
+							{
+								"name": "amount",
+								"type": "int256"
+							}
+						],
+						"name": "initialAmount",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "saleID",
+								"type": "string"
+							}
+						],
+						"name": "itemDelivered",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_auctionID",
+								"type": "string"
+							},
+							{
+								"name": "_bidderID",
+								"type": "string"
+							},
+							{
+								"name": "bidAmount",
+								"type": "int256"
+							}
+						],
+						"name": "placeBid",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "saleID",
+								"type": "string"
+							}
+						],
+						"name": "receiveFromOwner",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"name": "location",
+								"type": "string"
+							},
+							{
+								"name": "productID",
+								"type": "string"
+							},
+							{
+								"name": "weight",
+								"type": "int256"
+							}
+						],
+						"name": "registerprod",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "saleID",
+								"type": "string"
+							}
+						],
+						"name": "selectDelivery",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "auctionID",
+								"type": "string"
+							},
+							{
+								"name": "productID",
+								"type": "string"
+							},
+							{
+								"name": "Location",
+								"type": "string"
+							},
+							{
+								"name": "floorprice",
+								"type": "int256"
+							}
+						],
+						"name": "startAuction",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_auctionID",
+								"type": "string"
+							}
+						],
+						"name": "transferOwnership",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": false,
+						"inputs": [
+							{
+								"name": "_auctionID",
+								"type": "string"
+							}
+						],
+						"name": "transferPayment",
+						"outputs": [],
+						"payable": false,
+						"stateMutability": "nonpayable",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "_auctionID",
+								"type": "string"
+							}
+						],
+						"name": "announceWinner",
+						"outputs": [
+							{
+								"name": "",
+								"type": "address"
+							},
+							{
+								"name": "",
+								"type": "int256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "auc",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "certify",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [
+							{
+								"name": "productID",
+								"type": "string"
+							}
+						],
+						"name": "queryprod",
+						"outputs": [
+							{
+								"name": "",
+								"type": "address"
+							},
+							{
+								"name": "",
+								"type": "string"
+							},
+							{
+								"name": "",
+								"type": "int256"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					},
+					{
+						"constant": true,
+						"inputs": [],
+						"name": "state",
+						"outputs": [
+							{
+								"name": "",
+								"type": "uint8"
+							}
+						],
+						"payable": false,
+						"stateMutability": "view",
+						"type": "function"
+					}
+				]
+            }
+        }
+    }
+}
